@@ -8,6 +8,11 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const customDomain = process.env.CUSTOM_DOMAIN
+  ?.replace(/^https?:\/\//, '')
+  .replace(/\/$/, '');
+const hasCustomDomain = Boolean(customDomain);
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'My Site',
@@ -20,10 +25,10 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://fort-ind.github.io',
+  url: hasCustomDomain ? `https://${customDomain}` : 'https://fort-ind.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs/',
+  baseUrl: hasCustomDomain ? '/' : '/docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -111,7 +116,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: 'docs/intro',
               },
             ],
           },
@@ -128,7 +133,7 @@ const config = {
               },
               {
                 label: 'X',
-                href: 'https://x.com/docusaurus',
+                href: 'https://x.com/rynizx',
               },
             ],
           },
