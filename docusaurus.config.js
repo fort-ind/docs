@@ -5,10 +5,20 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
-const customDomain = process.env.CUSTOM_DOMAIN
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const cnamePath = path.join(__dirname, 'static', 'CNAME');
+const cnameDomain = fs.existsSync(cnamePath)
+  ? fs.readFileSync(cnamePath, 'utf8').trim()
+  : undefined;
+
+const customDomain = (process.env.CUSTOM_DOMAIN || cnameDomain)
   ?.replace(/^https?:\/\//, '')
   .replace(/\/$/, '');
 const hasCustomDomain = Boolean(customDomain);
