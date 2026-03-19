@@ -15,8 +15,8 @@ const hasCustomDomain = Boolean(customDomain);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'fort.ind docs',
+  tagline: 'docs are funny :3',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -88,7 +88,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'My Site',
+        title: 'fort.ind docs',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
