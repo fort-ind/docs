@@ -2,42 +2,15 @@
 sidebar_position: 1
 ---
 
-# Create a Page
+# fort.ind refuses to load/games refuses to load
 
-Add **Markdown or React** files to `src/pages` to create a **standalone page**:
+Sometimes, the emulator may show a network error when downloading game data. This can't be fixed; your only option is to switch to a different network. If you still need help, visit our Discord server.
 
-- `src/pages/index.js` → `localhost:3000/`
-- `src/pages/foo.md` → `localhost:3000/foo`
-- `src/pages/foo/bar.js` → `localhost:3000/foo/bar`
+## **How can I fix this?**
 
-## Create your first React Page
+Try making sure your content filter isn’t blocking Fort.ind. Many schools block access to Fort, which causes issues with getting games. Sometimes, it's easier to download the game HTML files. We will soon provide a Google Drive folder with them. **And make sure these URLs are available/unblocked (listed below)**
 
-Create a file at `src/pages/my-react-page.js`:
-
-```jsx title="src/pages/my-react-page.js"
-import React from 'react';
-import Layout from '@theme/Layout';
-
-export default function MyReactPage() {
-  return (
-    <Layout>
-      <h1>My React page</h1>
-      <p>This is a React page</p>
-    </Layout>
-  );
-}
-```
-
-A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).
-
-## Create your first Markdown Page
-
-Create a file at `src/pages/my-markdown-page.md`:
-
-```mdx title="src/pages/my-markdown-page.md"
-# My Markdown page
-
-This is a Markdown page
-```
-
-A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page).
+1. files.fort1nd.com ← for downloading updates
+2. [www.fort1nd.com](http://www.fort1nd.com/) ← site itself
+3. services.fort1nd.com ← core services/proxies/cdn
+4. [atari-embeds.googleusercontent.com](https://help.fort1nd.com/article/atari-embeds.googleusercontent.com) ← html/flash/retro games are hosted here

@@ -1,8 +1,8 @@
 {
-  "label": "Tutorial - Basics",
+  "label": "Common issues",
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "5 minutes to learn the most important Docusaurus concepts."
+    "description": "issues that are commonly encountered by people and how you can fix em!"
   }
 }

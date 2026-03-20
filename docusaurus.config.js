@@ -25,8 +25,8 @@ const hasCustomDomain = Boolean(customDomain);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'fort.ind docs',
-  tagline: 'docs are funny :3',
+  title: 'Fort.ind (main)',
+  tagline: 'About fort',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -84,7 +84,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'fort.ind docs',
+        title: 'Fort.ind',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -94,7 +94,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Fort.ind (main)',
           },
           {
             href: 'https://github.com/fort-ind/docs',
@@ -110,7 +110,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Main Website',
                 to: 'docs/intro',
               },
             ],
@@ -142,7 +142,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} fort.ind. made with love :3`,
       },
       prism: {
         theme: prismThemes.github,
