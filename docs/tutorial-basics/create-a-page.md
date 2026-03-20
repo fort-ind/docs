@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-# fort.ind refuses to load/games refuses to load
+# Fort.ind or Games Refuse to Load
 
 Sometimes, the emulator may show a network error when downloading game data. This can't be fixed; your only option is to switch to a different network. If you still need help, visit our Discord server.
 
