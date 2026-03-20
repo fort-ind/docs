@@ -7,7 +7,7 @@ Sometimes, the emulator may show a network error when downloading game data. Thi
 
 ## **How can I fix this?**
 
-Try making sure your content filter isn’t blocking Fort.ind. Many schools block access to Fort, which causes issues with getting games. Sometimes, it's easier to download the game HTML files. We will soon provide a Google Drive folder with them. **And make sure these URLs are available/unblocked (listed below)**
+Try making sure your content filter isn’t blocking Fort1nd. Many schools block access to Fort, which causes issues with getting games. Sometimes, it's easier to download the game HTML files. We will soon provide a Google Drive folder with them. **And make sure these URLs are available/unblocked (listed below)**
 
 1. files.fort1nd.com ← for downloading updates
 2. [www.fort1nd.com](http://www.fort1nd.com/) ← site itself
