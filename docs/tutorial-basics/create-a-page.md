@@ -12,7 +12,7 @@ Try making sure your content filter isn’t blocking Fort.ind. Many schools bloc
 1. files.fort1nd.com ← for downloading updates
 2. [www.fort1nd.com](http://www.fort1nd.com/) ← site itself
 3. services.fort1nd.com ← core services/proxies/cdn
-4. [atari-embeds.googleusercontent.com](https://help.fort1nd.com/article/atari-embeds.googleusercontent.com) ← html/flash/retro games are hosted here
+4. [atari-embeds.googleusercontent.com](https://atari-embeds.googleusercontent.com/) ← html/flash/retro games are hosted here
 
 
 :::tip tip :P
