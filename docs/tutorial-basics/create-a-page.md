@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 ---
-
 # fort.ind refuses to load/games refuses to load
 
 Sometimes, the emulator may show a network error when downloading game data. This can't be fixed; your only option is to switch to a different network. If you still need help, visit our Discord server.
@@ -14,3 +13,10 @@ Try making sure your content filter isn’t blocking Fort.ind. Many schools bloc
 2. [www.fort1nd.com](http://www.fort1nd.com/) ← site itself
 3. services.fort1nd.com ← core services/proxies/cdn
 4. [atari-embeds.googleusercontent.com](https://help.fort1nd.com/article/atari-embeds.googleusercontent.com) ← html/flash/retro games are hosted here
+
+
+:::tip tip :P
+
+make sure to use a home network and make sure your antivirus is not blocking fort1nd.com
+
+:::
