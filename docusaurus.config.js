@@ -25,7 +25,7 @@ const hasCustomDomain = Boolean(customDomain);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Fort.ind (main)',
+  title: 'Fort.ind docs',
   tagline: 'About fort',
   favicon: 'img/favicon.ico',
 
