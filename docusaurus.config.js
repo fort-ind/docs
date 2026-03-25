@@ -86,7 +86,7 @@ const config = {
       navbar: {
         title: 'Fort.ind',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'fort.ind logo',
           src: 'img/logo.svg',
         },
         items: [
