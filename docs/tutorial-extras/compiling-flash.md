@@ -16,13 +16,13 @@ First, you will need to find your SWF file. Some files can be found in random Gi
 
 If you found your flash game on a random GitHub repository, then follow the A instructions, if not, follow B instructions.
 
-1A. Copy the link (for example <https://github.com/StrangerKO/theworldshardestgame.swf/blob/main/theworldshardestgame.swf>)
+1A. Copy the link (for example [theworldshardestgame.swf](https://github.com/StrangerKO/theworldshardestgame.swf/blob/main/theworldshardestgame.swf)).
 
-2A. If the file is over 20mb, you have to go to <https://raw.githack.com/> then paste the link there, go to <https://cdn.jsdelivr.net/github/>
+2A. If the file is over 20mb, go to [https://raw.githack.com](https://raw.githack.com/), paste the GitHub URL there, then go to [https://cdn.jsdelivr.net/github/](https://cdn.jsdelivr.net/github/).
 
-3A. Paste the link and copy the converted link (should look like <https://cdn.jsdelivr.net/gh/StrangerKO/theworldshardestgame.swf@main/theworldshardestgame.swf>)
+3A. Paste the link and copy the converted link (should look like [cdn.jsdelivr link](https://cdn.jsdelivr.net/gh/StrangerKO/theworldshardestgame.swf@main/theworldshardestgame.swf)).
 
-4A. Go to <https://github.com/genizy/sgdsgd/blob/main/flashgame.html> for the template link and copy the code, then replace the PUT THE URL HERE part with the URL that was generated.
+4A. Go to [flashgame.html template](https://github.com/genizy/sgdsgd/blob/main/flashgame.html) and copy the code, then replace the PUT THE URL HERE part with the URL that was generated.
 
 5A. Save the file and you can test it. If you edited the file in the explorer, you can open it there and test it; otherwise, you can test it on an online HTML tester.
 
