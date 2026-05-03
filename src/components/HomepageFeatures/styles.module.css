@@ -5,7 +5,21 @@
   width: 100%;
 }
 
+.featureImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
 .featureSvg {
+  display: block;
   height: 200px;
   width: 200px;
+}
+
+.featureSvgReadingCat {
+  height: 180px;
+  width: 180px;
+  transform: translateX(-10px);
 }

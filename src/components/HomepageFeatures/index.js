@@ -6,6 +6,7 @@ const FeatureList = [
   {
     title: 'Easy to Use',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    svgClassName: styles.featureSvg,
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -14,18 +15,19 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Learn about fort.ind!',
+    Svg: require('@site/static/img/readingcat.svg').default,
+    svgClassName: clsx(styles.featureSvg, styles.featureSvgReadingCat),
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        get a feel on how to make games into HTML files, and how to connect with others!
       </>
     ),
   },
   {
     title: 'Powered by React',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    svgClassName: styles.featureSvg,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
@@ -35,11 +37,11 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, title, description, svgClassName}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+      <div className={styles.featureImage}>
+        <Svg className={svgClassName} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
