@@ -14,7 +14,6 @@ Try making sure your content filter isn’t blocking Fort.ind. Many schools bloc
 3. services.fort1nd.com ← core services/proxies/cdn
 4. [atari-embeds.googleusercontent.com](https://help.fort1nd.com/article/atari-embeds.googleusercontent.com) ← html/flash/retro games are hosted here
 
-
 :::tip tip :P
 
 make sure to use a home network and make sure your antivirus is not blocking fort1nd.com
