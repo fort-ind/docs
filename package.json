@@ -29,6 +29,10 @@
     "@docusaurus/module-type-aliases": "^3.10.1",
     "@docusaurus/types": "^3.10.1"
   },
+  "resolutions": {
+    "serialize-javascript": "^7.0.5",
+    "uuid": "^14.0.0"
+  },
   "browserslist": {
     "production": [
       ">0.5%",
