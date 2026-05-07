@@ -1,0 +1,53 @@
+{
+  "name": "Docusaurus Dev",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+
+  "containerEnv": {
+    "NODE_ENV": "development"
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-ceintl.vscode-language-pack-de",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-vscode.makefile-tools"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[markdown]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        }
+      }
+    }
+  },
+
+  "postCreateCommand": "yarn install",
+
+  "remoteUser": "node",
+
+  "forwardPorts": [3000, 3001],
+  "portsAttributes": {
+    "3000": {
+      "label": "Docusaurus",
+      "onAutoForward": "notify"
+    },
+    "3001": {
+      "label": "Alternative",
+      "onAutoForward": "notify"
+    }
+  },
+
+  "capAdd": ["SYS_PTRACE"],
+  "securityOpt": ["apparmor=unconfined"],
+
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached"
+  ]
+}
