@@ -1,7 +1,7 @@
 {
   "name": "use me to work on docs",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
-  
+
   "features": {
     "ghcr.io/devcontainers/features/git:1": {}
   },
@@ -28,7 +28,7 @@
     }
   },
 
-  "postCreateCommand": "npm install -g sfw && sfw yarn install",
+  "postCreateCommand": "npm install -g sfw && sfw yarn install && sfw yarn start",
 
   "remoteUser": "node",
 
