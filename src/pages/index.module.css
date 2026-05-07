@@ -11,6 +11,31 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #170a28;
+  isolation: isolate;
+}
+
+.heroBanner::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background:
+    linear-gradient(120deg, rgba(18, 8, 31, 0.92), rgba(76, 29, 149, 0.68)),
+    radial-gradient(circle at 80% 18%, rgba(216, 180, 254, 0.26), transparent 24rem);
+}
+
+.heroBanner :global(.container) {
+  position: relative;
+  z-index: 1;
+}
+
+.heroBanner :global(.hero__title) {
+  color: #ffffff;
+}
+
+.heroBanner :global(.hero__subtitle) {
+  color: #eadcff;
 }
 
 @media screen and (max-width: 996px) {
