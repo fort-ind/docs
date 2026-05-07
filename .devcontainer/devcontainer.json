@@ -28,7 +28,7 @@
     }
   },
 
-  "postCreateCommand": "npm install -g sfw && sfw yarn install && sfw yarn start",
+  "postCreateCommand": "npm install -g sfw && sfw yarn install",
 
   "remoteUser": "node",
 
