@@ -1,15 +1,14 @@
-<div align="center">
-	<img src="static/img/logofornow.png" alt="Fort Docs logo" width="360" />
+<p align="center">
+	<img src="static/img/logofornow.png" alt="Fort Docs logo" width="280" />
+</p>
 
-    <h1 align="center">fort docs</h1>
+<h1 align="center">fort docs</h1>
 
-    <table align="center">
-    	<tr>
-    		<td align="center">offical docs for fort.ind, fort.social and all of our projects!.</td>
-    	</tr>
-    </table>
-
-</div>
+<table align="center">
+	<tr>
+		<td align="center">Official docs for fort.ind, fort.social, and all of our projects.</td>
+	</tr>
+</table>
 
 ## Installation
 
