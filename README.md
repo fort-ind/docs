@@ -1,5 +1,5 @@
 <p align="center">
- <img src="static/img/logofornow.png" alt="Fort Docs logo" width="280" />
+ <img src="static/img/logofornow.png" alt="Fort Docs logo" width="380" />
 </p>
 
 # fort docs
