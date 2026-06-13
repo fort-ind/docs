@@ -1,11 +1,10 @@
+<p align="center">
+ <img src="static/img/logofornow.png" alt="Fort Docs logo" width="280" />
+</p>
 
 # fort docs
 
-![Fort Docs logo](static/img/logofornow.png)
-
-## About fort docs
-
-> Official docs for fort.ind, fort.social, and all of our projects.
+Official docs for fort.ind, fort.social, and all of our projects.
 
 ## Installation
 
