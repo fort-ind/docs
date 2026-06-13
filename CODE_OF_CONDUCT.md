@@ -1,5 +1,8 @@
 # Contributor Covenant Code of Conduct
 
+> [!NOTE]
+> if you want to read the full code of conduct in another language, please click [here](https://www.contributor-covenant.org/translations).
+
 ## Our Pledge
 
 We as members, contributors, and leaders pledge to make participation in our
