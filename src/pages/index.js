@@ -23,7 +23,7 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link className="button button--secondary button--lg" to="docs/intro">
-            go read the docs you
+            read the docs!
           </Link>
         </div>
       </div>
@@ -35,8 +35,8 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`fort.ind docs`}
+      description="the only docs site you will need for all things fort.ind related! fort.social, fort.uwp and more!"
     >
       <HomepageHeader />
       <main>
