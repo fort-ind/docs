@@ -1,12 +1,12 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    svgClassName: styles.featureSvg,
+    title: "Easy to Use",
+    Svg: require("@site/static/img/meow.svg").default,
+    svgClassName: clsx(styles.featureSvg, styles.featureSvgMeow),
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -15,18 +15,19 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Learn about fort.ind!',
-    Svg: require('@site/static/img/readingcat.svg').default,
+    title: "Learn about fort.ind!",
+    Svg: require("@site/static/img/readingcat.svg").default,
     svgClassName: clsx(styles.featureSvg, styles.featureSvgReadingCat),
     description: (
       <>
-        get a feel on how to make games into HTML files, and how to connect with others!
+        get a feel on how to make games into HTML files, and how to connect with
+        others!
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Powered by React",
+    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     svgClassName: styles.featureSvg,
     description: (
       <>
@@ -37,9 +38,9 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description, svgClassName}) {
+function Feature({ Svg, title, description, svgClassName }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className={styles.featureImage}>
         <Svg className={svgClassName} role="img" />
       </div>

@@ -18,6 +18,12 @@
   width: 200px;
 }
 
+.featureSvgMeow {
+  height: 220px; /* make it BIG a big meow.. */
+  width: 220px;
+  transform: translateX(8px);
+}
+
 .featureSvgReadingCat {
   height: 180px;
   width: 180px;
