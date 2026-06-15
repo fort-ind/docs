@@ -4,13 +4,13 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Easy to Use",
+    title: "Create!",
     Svg: require("@site/static/img/meow.svg").default,
     svgClassName: clsx(styles.featureSvg, styles.featureSvgMeow),
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        the docs can help you devlop for fort.ind and putting games into html
+        files or trying to mess around with fort.uwp!
       </>
     ),
   },
