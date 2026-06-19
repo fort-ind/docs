@@ -19,3 +19,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 package-lock.json
+
+# editor config files (those dont need to be shared right??)
+.editorconfig
+.vscode/
+.idea/
