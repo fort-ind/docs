@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
+  height: 220px;
 }
 
 .featureSvg {
