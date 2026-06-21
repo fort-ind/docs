@@ -117,7 +117,7 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'find us :p',
             items: [
               {
                 label: 'fort.social',
@@ -128,13 +128,13 @@ const config = {
                 href: 'https://discord.gg/aBUQ7GKWMK',
               },
               {
-                label: 'X',
+                label: 'twitter',
                 href: 'https://x.com/rynizx',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'source code',
             items: [
               {
                 label: 'GitHub',
