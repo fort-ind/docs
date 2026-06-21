@@ -1,11 +1,12 @@
 import clsx from "clsx";
 import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 const FeatureList = [
   {
     title: "Create!",
-    Svg: require("@site/static/img/meow.svg").default,
+    imgSrc: "img/meow.svg",
     svgClassName: clsx(styles.featureSvg, styles.featureSvgMeow),
     description: (
       <>
@@ -16,7 +17,7 @@ const FeatureList = [
   },
   {
     title: "Learn about fort.ind!",
-    Svg: require("@site/static/img/readingcat.svg").default,
+    imgSrc: "img/readingcat.svg",
     svgClassName: clsx(styles.featureSvg, styles.featureSvgReadingCat),
     description: (
       <>
@@ -27,21 +28,22 @@ const FeatureList = [
   },
   {
     title: "Contribute!",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    imgSrc: "img/verybadsvgconversion.svg",
     svgClassName: styles.featureSvg,
     description: (
       <>
-        feel like there is something that should be added :p well guess what YOU can add it!  
+        feel like there is something that should be added :p well guess what YOU can add it! 
       </>
     ),
   },
 ];
 
-function Feature({ Svg, title, description, svgClassName }) {
+function Feature({ imgSrc, title, description, svgClassName }) {
+  const imgUrl = useBaseUrl(imgSrc);
   return (
     <div className={clsx("col col--4")}>
       <div className={styles.featureImage}>
-        <Svg className={svgClassName} role="img" />
+        <img src={imgUrl} alt={title} className={svgClassName} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
