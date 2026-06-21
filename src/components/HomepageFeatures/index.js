@@ -26,13 +26,12 @@ const FeatureList = [
     ),
   },
   {
-    title: "Powered by React",
+    title: "Contribute!",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     svgClassName: styles.featureSvg,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        feel like there is something that should be added :p well guess what YOU can add it!  
       </>
     ),
   },
