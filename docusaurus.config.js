@@ -98,6 +98,12 @@ const config = {
             label: 'Fort.ind (main)',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'fortSocialSidebar',
+            position: 'left',
+            label: 'fort.social',
+          },
+          {
             href: 'https://github.com/fort-ind/docs',
             label: 'GitHub',
             position: 'right',
