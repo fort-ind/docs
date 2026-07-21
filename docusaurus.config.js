@@ -104,6 +104,12 @@ const config = {
             label: 'fort.social',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'fortUwpSidebar',
+            position: 'left',
+            label: 'fort.uwp',
+          },
+          {
             href: 'https://github.com/fort-ind/docs',
             label: 'GitHub',
             position: 'right',

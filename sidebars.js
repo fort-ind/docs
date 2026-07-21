@@ -36,6 +36,9 @@ const sidebars = {
     },
   ],
 
+  // fort.uwp docs section
+  fortUwpSidebar: ['fort.uwp docs+dev/intro'],
+
   // fort.social docs section
   fortSocialSidebar: ['fort.social stuff/intro'],
 
