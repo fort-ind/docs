@@ -29,7 +29,7 @@ There's also a first-run welcome dialog, a custom acrylic title bar, and Live Ti
 
 ## storage
 
-No database - just the basics:
+theres really no DB or anything here 
 
 - `ApplicationData.LocalSettings` for small stuff like theme and UI state
 - Local JSON files for a cached copy of your profile and the parsed sitemap

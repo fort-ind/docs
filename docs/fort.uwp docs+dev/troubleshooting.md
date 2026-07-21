@@ -14,15 +14,15 @@ fort.uwp isn't Store-signed - it ships as a sideloaded MSIX/APPX with a self-sig
 - Open the `.cer` → Install Certificate → **Local Machine** → **Trusted People**
 - Not Trusted Root Certification Authorities - that's the most common mistake here and it'll silently fail (or refuse) install if you pick it
 
-Easiest fix: just run the included `scripts\Install.ps1` as admin - it installs the cert to the right place, installs the VCLibs/WinUI runtime dependencies, and turns on sideloading for you in one step.
+Easiest fix: just run the included `scripts\Install.ps1` as admin saves you time if you dont know what your doing :p
 
 ### "Sideloading apps is not allowed" / can't install at all
 
-Developer Mode (or "Sideload apps") needs to be on: Windows Settings → Update & Security → For developers. `Install.ps1` will enable this for you if it's off; Visual Studio will also prompt you the first time you try to deploy.
+Developer Mode (or "Sideload apps if on a older bulid of W10") needs to be on: Windows Settings → Update & Security → For developers. `Install.ps1` will enable this for you if it's off; Visual Studio should also prompt you the first time you try to deploy.
 
 ### missing dependency errors (VCLibs, WinUI runtime)
 
-The app depends on `Microsoft.VCLibs.140.00` and the `Microsoft.UI.Xaml.2.8` (WinUI 2) runtime package being present. `Install.ps1` checks for both and downloads/installs whichever is missing - if you're installing manually instead, you'll need to grab and install those yourself first. 
+The app depends on `Microsoft.VCLibs.140.00` and the `Microsoft.UI.Xaml.2.5` (WinUI 2) runtime package being present. `Install.ps1` checks for both and downloads/installs whichever is missing - if you're installing manually instead, you'll need to grab and install those yourself first (should be found in the same folder as the appx)
 
 ## sign-in issues
 
@@ -36,7 +36,7 @@ This is expected, not a bug: on launch, the app shows your **cached** profile im
 
 ### can't edit my profile from the app
 
-That's intentional - `ProfilePage` is read-only. fort.social is the source of truth for your account, so edits happen there, not in fort.uwp.
+That's intended- `ProfilePage` is read-only. fort.social is where info for your account is fetched so edits happen there, not in fort.uwp.
 
 ## build issues
 

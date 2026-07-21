@@ -7,10 +7,10 @@ sidebar_position: 4
 
 - **Visual Studio 2022**, with the **"Universal Windows Platform development"** workload installed (this pulls in the Windows 10 SDK and the UWP/XAML build tools)
 - Windows 10 SDK **10.0.19041.0** (the project also supports down to 10.0.17763.0, i.e. Windows 10 1809)
-- That's it as far as SDKs go - no extra NuGet feeds, no secrets/config files needed to build locally
+- That's it as far as SDKs go - no extra NuGet stuff, no secrets/config files needed to build locally
 
 :::note
-This is a legacy-style UWP project, not an SDK-style one - **`dotnet build` won't work here**. You need MSBuild with the UWP/XAML targets, which only ship with Visual Studio.
+This is a legacy-style UWP project, not an SDK one - **`dotnet build` won't work here**. You need MSBuild with the UWP/XAML targets, which only exist with Visual Studio.
 :::
 
 ## opening & building
