@@ -25,8 +25,8 @@ Everything lives in one project, `Fort.ind UWP\`:
 There's no MVVM and no DI here on purpose - keep new code consistent with that:
 
 - New functionality generally goes into a **static service class** in `Services\`, called directly from a page's code-behind
-- If you're adding a new nav section, follow the pattern in `MainPage.xaml.vb`'s `ShowContent` method - most sections are just panels toggled by visibility; only add a "real" page if you genuinely need frame-based navigation like Profile does 
-- If your feature should show up in search, add entries via `SitemapService`/`SearchItem` rather than inventing a separate search mechanism since fort.uwp merges this with its own sitemap.xml 
+- If you're adding a new nav section, follow the pattern in `MainPage.xaml.vb`'s `ShowContent` method - most sections are just panels toggled by visibility; only add a "real" page if you genuinely need frame-based navigation like Profile does
+- If your feature should show up in search, add entries via `SitemapService`/`SearchItem` rather than inventing a separate search mechanism since fort.uwp merges this with its own sitemap.xml
 
 ## design guidelines
 
