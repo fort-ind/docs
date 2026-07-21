@@ -50,7 +50,7 @@ Read-only info plus one destructive button:
 
 - **Location** - the app's local folder path, from `LocalStorageService.DataPath`
 - **Status** - whether you're logged in, and as who (`@username@social.fort1nd.com`)
-- **Clear login info** - only visible while logged in 
+- **Clear login info** - only visible while logged in
 
 Clearing login info shows a confirmation dialog first, then calls `ProfileService.LogoutAsync` - which drops the token from the Credential Vault and deletes the cached profile JSON. Worth knowing: this **doesn't deauthorize the app on fort.social's side**. The dialog says so, and the app can't do it itself since it only holds `read:account`. To fully revoke, go to fort.social → profile → service integration and unlink there. See [sign-in & accounts](./sign-in-and-accounts.md).
 

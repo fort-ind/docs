@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 # setting up your account
 
-signing up for fort.social is quite simple! so lets go through the signup process 
+signing up for fort.social is quite simple! so lets go through the signup process
 
 first, head over to social.fort1nd.com there should be a big purple button that says "signup at this instance" if your making a secondary acount head to your account switcher and click add account > create account (like this)
 
