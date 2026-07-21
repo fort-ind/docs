@@ -126,6 +126,14 @@ const config = {
                 label: 'Main Website',
                 to: 'docs/intro',
               },
+              {
+                label: 'fort.social docs',
+                to: 'docs/fort.social stuff/intro',
+              },
+              {
+                label: 'fort.uwp docs',
+                to: 'docs/fort.uwp docs+dev/intro',
+              },
             ],
           },
           {
