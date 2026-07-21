@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 7
 ---
 # troubleshooting
 
@@ -46,7 +46,7 @@ This is a legacy-style UAP project, not an SDK-style one - it needs MSBuild with
 
 ### can't deploy/debug to ARM or ARM64
 
-There's no ARM emulator for a typical x64 dev machine - you'll need an actual ARM/ARM64 device (or a remote machine connection) to deploy and debug those platform configurations.
+There's no ARM emulator for a typical x64 dev machine - you'll need an actual ARM/ARM64 device (or a remote machine connection) to deploy and debug those platform.
 
 ## still stuck?
 

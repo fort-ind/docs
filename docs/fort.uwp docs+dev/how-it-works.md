@@ -35,4 +35,4 @@ theres really no DB or anything here
 - Local JSON files for a cached copy of your profile and the parsed sitemap
 - Windows Credential Vault for the one actual secret (your fort.social access token)
 
-The app only talks to `social.fort1nd.com` over the network (for sign-in) - everything else is either bundled with the app or opened as a link in your browser.
+The app only talks to `social.fort1nd.com` over the internet (for sign-in) - everything else is either bundled with the app or opened as a link in your browser.

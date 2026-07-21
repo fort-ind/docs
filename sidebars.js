@@ -45,7 +45,12 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      items: ['fort.uwp docs+dev/how-it-works', 'fort.uwp docs+dev/sign-in-and-accounts'],
+      items: [
+        'fort.uwp docs+dev/how-it-works',
+        'fort.uwp docs+dev/sign-in-and-accounts',
+        'fort.uwp docs+dev/search',
+        'fort.uwp docs+dev/settings-and-customization',
+      ],
     },
     'fort.uwp docs+dev/building',
     'fort.uwp docs+dev/troubleshooting',
