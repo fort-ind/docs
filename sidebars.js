@@ -58,7 +58,11 @@ const sidebars = {
   ],
 
   // fort.social docs section
-  fortSocialSidebar: ['fort.social stuff/intro'],
+  fortSocialSidebar: [
+    'fort.social stuff/intro',
+    'fort.social stuff/page-2',
+    'fort.social stuff/page-3',
+  ],
 
   // But you can create a sidebar manually
   /*
