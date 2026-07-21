@@ -3,9 +3,10 @@ sidebar_position: 1
 ---
 # hello!
 
-Here you will learn more about fort.uwp this place includes guides, help and just how to bulid the app :)
+fort.uwp is the native Windows (UWP) companion app for fort1nd.com - think of it as a lightweight shell that gets you to games, your fort.social account, and site content without opening a browser. It's still very much a prototype, so expect rough edges :)
 
-* bulidng for fort.uwp
-* finding resources on fort.uwp updates
-* anything that requires reading
-* compiling and contributing to fort.uwp
+Here's what you'll find in this section:
+
+* [how it works](./how-it-works.md) - what the app actually does and how it's put together
+* [building it](./building.md) - prerequisites, building, running, and packaging
+* [contributing](./contributing.md) - project layout, coding patterns, and where help is wanted

@@ -37,7 +37,20 @@ const sidebars = {
   ],
 
   // fort.uwp docs section
-  fortUwpSidebar: ['fort.uwp docs+dev/intro'],
+  fortUwpSidebar: [
+    'fort.uwp docs+dev/intro',
+    {
+      type: 'category',
+      label: 'How It Works',
+      link: {
+        type: 'generated-index',
+      },
+      items: ['fort.uwp docs+dev/how-it-works', 'fort.uwp docs+dev/sign-in-and-accounts'],
+    },
+    'fort.uwp docs+dev/building',
+    'fort.uwp docs+dev/troubleshooting',
+    'fort.uwp docs+dev/contributing',
+  ],
 
   // fort.social docs section
   fortSocialSidebar: ['fort.social stuff/intro'],
