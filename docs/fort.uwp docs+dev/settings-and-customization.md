@@ -34,7 +34,7 @@ The interesting bit is that each tint is really *two* colours (woah shocking):
 | Red | `#3D1515` | `#F5CECE` |
 | fort.inds og color :3 | `#1A1A2E` | `#D0D0EA` |
 
-The dark hex is what's stored; when the effective theme is light, `s_lightTintMap` swaps in the pale equivalent. Tint opacity changes too - **0.8** in dark, **0.6** in light - since the same opacity over a light backdrop washes out completely. `TintLuminosityOpacity` stays at 0.85 either way.
+The dark hex is what's stored; when the effective theme is light, `s_lightTintMap` swaps in the pale equivalent. Tint opacity changes too - **0.8** in dark, **0.6** in light - since the same opacity over a light backdrop washes out completely.
 
 "Effective theme" here means: if the frame is set to `Default`, fall back to checking `Application.Current.RequestedTheme`, otherwise use the frame's value. That check shows up in a few places because `ElementTheme.Default` doesn't tell you *which* theme you actually got.
 
@@ -53,6 +53,21 @@ Read-only info plus one destructive button:
 - **Clear login info** - only visible while logged in
 
 Clearing login info shows a confirmation dialog first, then calls `ProfileService.LogoutAsync` - which drops the token from the Credential Vault and deletes the cached profile JSON. Worth knowing: this **doesn't deauthorize the app on fort.social's side**. The dialog says so, and the app can't do it itself since it only holds `read:account`. To fully revoke, go to fort.social → profile → service integration and unlink there. See [sign-in & accounts](./sign-in-and-accounts.md).
+
+### reset app
+
+Next to Clear login info is a **Reset app** button, it's the more destructive of the two. Where "clear login info" only touches your account session, this wipes *everything* the app has ever written locally: the auth token, the cached profile, the sitemap cache, and every `LocalSettings` value - theme, tint, panel-expanded states, the welcome-dialog flag, all of it. It leaves the app in the same state as a fresh install. Like clear login info, **it has no effect on your fort.social account itself.**
+
+Because that's irreversible, it's gated behind **two** separate confirmations rather than one:
+
+1. An explainer dialog describing what gets deleted
+2. A final "are you REALLYYYY sure" dialog with no way back after this point
+
+Once the wipe runs (`ProfileService.ResetAppDataAsync` → `LocalStorageService.ResetAllAppDataAsync`, which deletes everything in the local folder and clears `LocalSettings.Values` outright), the appearance settings are immediately reloaded from those now-empty defaults and a third dialog offers to restart the app right away via `CoreApplication.RequestRestartAsync`. A restart isn't strictly required - the reset already applied to this running session - but it's offered because a handful of things are only guaranteed consistent after a fresh process start.
+
+## accessibility
+
+Every settings row header and the tint swatches carry `AutomationProperties.Name`/`HelpText`, so a screen reader announces what a row does before it's expanded, not just its label. The tint swatches take this further: since the selected swatch is otherwise only indicated by a border color, `UpdateTintSelection` appends `" (selected)"` to the current swatch's automation name at runtime - a sighted user sees the highlight, a screen reader user gets the equivalent via the announced name.
 
 ## live tile
 

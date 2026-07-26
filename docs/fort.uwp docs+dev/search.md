@@ -17,7 +17,7 @@ Everything is a `SearchItem` - a title, a category, and then *either* a `Navigat
 
 There are three sources:
 
-1. **Static items** - a hardcoded array at the top of `MainPage.xaml.vb`. This covers nav destinations (Home, Games, Beta Programs, Profile, Social, About, Settings) plus a bunch of *settings* entries, so typing "dark mode" or "clear live tile" takes you to Settings instead of turning up nothing.
+1. **Static items** - a hardcoded array at the top of `MainPage.xaml.vb`. This covers nav destinations (home, games, betas, profile, social, settings) plus a bunch of *settings* entries, so typing "dark mode" or "clear live tile" takes you to Settings instead of turning up nothing. About no longer has its own entry here - it's reachable only as a row inside Settings now, not as a separate nav destination. (beacuse having 2 about pages is really fuckin dumb)
 2. **Sitemap items** - every URL in the bundled `sitemap.xml`, loaded asynchronously on startup and merged into the static list once ready. Search works before this finishes, you just won't get site results yet.
 3. **Your profile** - if you're signed in, a `Profile: {your display name}` entry is generated at query time rather than being stored in the list
 
