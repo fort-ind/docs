@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/javascript-node:24
+FROM mcr.microsoft.com/devcontainers/javascript-node:26
 
 # Install additional system packages
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
