@@ -30,10 +30,10 @@ There's no MVVM and no DI here on purpose - keep new code consistent with that:
 
 ## design guidelines
 
-The uwp repo has a `docs\windows10-uwp-design-guidance.md` file that's worth a read before touching XAML - it exists specifically to keep the UI looking authentically Windows 10 / WinUI 2 (acrylic, Reveal, Segoe MDL2 icons, Win10-era corner radii and type ramp) instead of drifting toward a Windows 11 / Fluent 2 look.
+This app should look like a Windows 10-era app, so refer to Microsoft's docs, use Fluent Design guidelines + Segoe MDL2 icons, and also make sure the design is accessible and is well thought :p 
 
 ## what's still a placeholder (good places to help)
 
-- **Games** and **Social** are just links out to the website right now, we dont have a functional API for this yet
+-  **Social** just links out to the website right now; we dont have a functional API for that yet
 
-If you want to pick something up, the in-app About section links to the GitHub repo and issue tracker - that's the best place to check what's already being worked on.
+If you want to pick something up, head to the GitHub repo and issue tracker - that's the best place to check what's already being worked on. or what needs fixing
