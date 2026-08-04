@@ -5,9 +5,8 @@ sidebar_position: 6
 
 ## prerequisites
 
-- **Visual Studio 2022**, with the **"Universal Windows Platform development"** workload installed (this pulls in the Windows 10 SDK and the UWP/XAML build tools)
+- **Visual Studio 2019 or newer**, with the **"Universal Windows Platform development"** workload installed (this pulls in the Windows 10 SDK and the UWP/XAML build tools)
 - Windows 10 SDK **10.0.19041.0** (the project also supports down to 10.0.17763.0, i.e. Windows 10 1809)
-- That's it as far as SDKs go - no extra NuGet stuff, no secrets/config files needed to build locally
 
 :::note
 This is a legacy-style UWP project, not an SDK one - **`dotnet build` won't work here**. You need MSBuild with the UWP/XAML targets, which only exist with Visual Studio.
@@ -17,7 +16,7 @@ This is a legacy-style UWP project, not an SDK one - **`dotnet build` won't work
 
 1. Open `Fort.ind UWP.sln` in Visual Studio
 2. Pick a Platform (x86/x64/ARM/ARM64) and Configuration (Debug/Release) from the toolbar
-3. Build with Ctrl+Shift+B - NuGet restore happens automatically
+3. Build with Ctrl+Shift+B - NuGet restore happens automatically 
 
 If you'd rather build from the command line (this is basically what CI does):
 
@@ -35,7 +34,7 @@ Just hit F5 in Visual Studio with a platform matching your machine (x64 is the c
 
 ## packaging & signing
 
-The project is set up to sign packages with a test certificate (`Fort.ind UWP_TemporaryKey.pfx`), but that file isn't committed - Visual Studio will generate one for you automatically the first time you build a package locally.
+The project is set up to sign packages with a test certificate (`Fort.ind UWP_TemporaryKey.pfx`), but that file isn't committed - Visual Studio will generate one for you automatically the first time you build locally.
 
 For end users, installing a built package means:
 
