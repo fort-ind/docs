@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # hello!
 
-fort.uwp is the native Windows (UWP) companion app for fort1nd.com - think of it as a lightweight shell that gets you to games, your fort.social account, and site content without opening a browser. It's still very much a prototype, so expect rough edges :)
+fort.uwp is the native Windows app for fort1nd.com - it lets you play your games, view your profile, without opening a browser. It's a beta, so not every feature is finished yet. and it has a couple rough edges :p
 
 Here's what you'll find in this section:
 
@@ -12,4 +12,4 @@ Here's what you'll find in this section:
 * [search](./search.md) - the search box, the bundled sitemap, and how results are built
 * [settings & customization](./settings-and-customization.md) - theme, accent tint, storage, and the settings rows
 * [building it](./building.md) - prerequisites, building, running, and packaging
-* [contributing](./contributing.md) - project layout, coding patterns, and where help is wanted
+* [contributing](./contributing.md) - project layout, code patterns, and where help is wanted

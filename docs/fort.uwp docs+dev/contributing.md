@@ -5,7 +5,7 @@ sidebar_position: 8
 
 ## project layout
 
-Everything lives in one project, `Fort.ind UWP\`:
+Everything lives in the fort.ind uwp folder
 
 | folder / file | what's there |
 |---|---|
@@ -24,16 +24,16 @@ Everything lives in one project, `Fort.ind UWP\`:
 
 There's no MVVM and no DI here on purpose - keep new code consistent with that:
 
-- New functionality generally goes into a **static service class** in `Services\`, called directly from a page's code-behind
-- If you're adding a new nav section, follow the pattern in `MainPage.xaml.vb`'s `ShowContent` method - most sections are just panels toggled by visibility; only add a "real" page if you genuinely need frame-based navigation like Profile does
+- New functionality generally goes into a static service class in `Services\`, called directly from a page's code-behind
+- If you're adding a new nav section, follow the pattern in `MainPage.xaml.vb`'s `ShowContent` method - most sections are just panels toggled by visibility; only add a "real" page if you genuinely need frame-based navigation like profile/games does
 - If your feature should show up in search, add entries via `SitemapService`/`SearchItem` rather than inventing a separate search mechanism since fort.uwp merges this with its own sitemap.xml
 
 ## design guidelines
 
-This app should look like a Windows 10-era app, so refer to Microsoft's docs, use Fluent Design guidelines + Segoe MDL2 icons, and also make sure the design is accessible and is well thought :p 
+This app should look like a Windows 10-era app, so refer to Microsoft's docs, use Fluent Design guidelines + Segoe MDL2 icons, and also make sure the design is accessible and is well thought :p
 
-## what's still a placeholder (good places to help)
+## what's still a placeholder (good places to help out!)
 
 -  **Social** just links out to the website right now; we dont have a functional API for that yet
 
-If you want to pick something up, head to the GitHub repo and issue tracker - that's the best place to check what's already being worked on. or what needs fixing
+If you want to pick something up, head to the GitHub repo - that's the best place to check what's already being worked on. or what needs fixing

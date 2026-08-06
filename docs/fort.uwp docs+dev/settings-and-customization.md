@@ -11,7 +11,7 @@ Settings isn't a separate page - it's an inline panel in `MainPage`, made of fiv
 
 Three options - **System default**, **Light**, **Dark** - saved under the `AppTheme` key.
 
-Applying a theme sets `RequestedTheme` on the **root `Frame`**, not on the app. since: `Application.RequestedTheme` can only be set before the app's first frame exists, so changing it at runtime would need a restart. Setting it on the root frame flows down to everything and takes effect instantly.
+Applying a theme sets `RequestedTheme` on the **root frame**, not on the app. since: `Application.RequestedTheme` can only be set before the app's first frame exists, so changing it at runtime would need a restart. Setting it on the root frame flows down to everything and takes effect instantly.
 
 Changing the theme also triggers two follow-ups:
 
@@ -58,7 +58,7 @@ Clearing login info shows a confirmation dialog first, then calls `ProfileServic
 
 Next to Clear login info is a **Reset app** button, it's the more destructive of the two. Where "clear login info" only touches your account session, this wipes *everything* the app has ever written locally: the auth token, the cached profile, the sitemap cache, and every `LocalSettings` value - theme, tint, panel-expanded states, the welcome-dialog flag, all of it. It leaves the app in the same state as a fresh install. Like clear login info, **it has no effect on your fort.social account itself.**
 
-Because that's irreversible, it's gated behind **two** separate confirmations rather than one:
+Because that's irreversible, it's gated behind 2 separate confirmations rather than one:
 
 1. An explainer dialog describing what gets deleted
 2. A final "are you REALLYYYY sure" dialog with no way back after this point
@@ -73,7 +73,7 @@ Every settings row header and the tint swatches carry `AutomationProperties.Name
 
 Two buttons:
 
-- **Refresh** - re-runs `UpdateLiveTile()`, pushing the current news content back onto the tile in case if its fucked up
+- **Refresh** - re-runs `UpdateLiveTile()`, pushing the news content back onto the tile in case if its fucked up
 - **Clear** - calls `LiveTileService.ClearTile()` *and* `ClearBadge()`, clearing the live tile to just be the app logo
 
 These exist mostly because live tiles are easy to get into a fucked state, and because there's no other way to force an update without relaunching.
@@ -88,9 +88,9 @@ All dialogs in `MainPage` go through a shared `SemaphoreSlim` with `WaitAsync(0)
 
 ## about
 
-Shows the version string from `AppConstants.AppVersionDisplay` and links out to the site, the GitHub repo, and the issue tracker.
+Shows the version string from `AppConstants.AppVersionDisplay` and links out to the site, the GitHub repo, and the github issues page.
 
-The version is read from the **package manifest** at runtime (`Package.Current.Id.Version`, formatted `Major.Minor.Build`) rather than being hardcoded, so the About screen can't drift from what CI actually built. There's a hardcoded fallback for the unpackaged case, and a `VersionChannel` suffix constant if you want to append something like "Beta".
+The version is read from the package manifest at runtime (`Package.Current.Id.Version`, formatted `Major.Minor.Build`) rather than being hardcoded, so the About screen can't drift from what CI actually built. There's a hardcoded fallback for the unpackaged case, and a `VersionChannel` suffix constant if you want to append something like "Beta".
 
 ## how the rows work
 
