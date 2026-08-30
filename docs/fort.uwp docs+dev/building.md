@@ -9,7 +9,7 @@ sidebar_position: 6
 - Windows 10 SDK **10.0.19041.0** (the project also supports down to 10.0.17763.0, i.e. Windows 10 1809)
 
 :::note
-This is a legacy-style UWP project, not an SDK one - **`dotnet build` won't work here**. You need MSBuild with the UWP/XAML targets, which only exist with Visual Studio.
+This is a legacy-style UWP project, not an SDK one - **`dotnet build` won't work here**. You need MSBuild with the UWP/XAML targets, which only exist with Visual Studio. There's also no test project.
 :::
 
 ## opening & building
@@ -17,12 +17,17 @@ This is a legacy-style UWP project, not an SDK one - **`dotnet build` won't work
 1. Open `Fort.ind UWP.sln` in Visual Studio
 2. Pick a Platform (x86/x64/ARM/ARM64) and Configuration (Debug/Release) from the toolbar
 3. Build with Ctrl+Shift+B
-If you'd rather build from the command line (this is basically what CI does):
+
+If you'd rather build from the command line (this is basically what CI does), 
 
 ```
-msbuild "Fort.ind UWP.sln" /t:Restore /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=17.0
-msbuild "Fort.ind UWP\Fort.ind UWP.vbproj" /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=17.0 /p:GenerateAppxPackageOnBuild=true /restore
+msbuild "Fort.ind UWP.sln" 
+msbuild "Fort.ind UWP\Fort.ind UWP.csproj" /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=xx.0 /p:GenerateAppxPackageOnBuild=true /restore
 ```
+
+:::note
+A command-line build only compiles - it can't verify runtime or visual issues. Visual Studio's own deploy step (F5) is what actually refreshes the installed package; a plain command-line build followed by a manual install can end up running a stale app. For anything you wanna take a look at, build and press F5 in Visual Studio.
+:::
 
 ## running & debugging
 
@@ -40,4 +45,10 @@ For end users, installing a built package means:
 1. Install the exported `.cer` certificate - into **trusted people**, not trusted root certs
 2. Run the .msix/.appx, or just run the included `scripts\Install.ps1` as admin, which handles the cert, VCLibs/WinUI runtime dependencies, and enabling sideloading all in one go
 
-CI (`.github/workflows/build-msix.yml`) builds x86/x64/ARM64 packages on every push, versioning from git tags (`v*`) when present. Tagged builds are signed using a certificate stored in GitHub secrets (regular PR builds are built unsigned.)
+## CI & versioning
+
+CI (`.github/workflows/build-msix.yml`) builds x86/x64/ARM64 packages on every push to `master` and on pull requests; a `v*` tag additionally cuts a GitHub release.
+
+Pull request builds are always unsigned. Any other build (a push to `master`, or a `v*` tag) is signed using a certificate stored in GitHub secrets, when one is configured - otherwise it falls back to building unsigned there too.
+
+also! if you want to bump the version, its really simple just edit `package.appxmanifest`
