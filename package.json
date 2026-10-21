@@ -4,16 +4,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "deploy:custom": "docusaurus deploy --cname %CUSTOM_DOMAIN%",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "docusaurus": "node scripts/docusaurus.mjs",
+    "start": "node scripts/docusaurus.mjs start",
+    "build": "node scripts/docusaurus.mjs build",
+    "swizzle": "node scripts/docusaurus.mjs swizzle",
+    "deploy": "node scripts/docusaurus.mjs deploy",
+    "deploy:custom": "node scripts/docusaurus.mjs deploy --cname %CUSTOM_DOMAIN%",
+    "clear": "node scripts/docusaurus.mjs clear",
+    "serve": "node scripts/docusaurus.mjs serve",
+    "write-translations": "node scripts/docusaurus.mjs write-translations",
+    "write-heading-ids": "node scripts/docusaurus.mjs write-heading-ids"
   },
   "dependencies": {
     "@docusaurus/core": "^3.10.2",
@@ -48,5 +48,9 @@
   },
   "engines": {
     "node": ">=20.0"
+  },
+  "volta": {
+    "node": "22.23.4",
+    "yarn": "1.22.22"
   }
 }

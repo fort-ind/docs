@@ -8,6 +8,8 @@ Official docs for fort.ind, fort.social, and all of our projects.
 
 ## Installation
 
+Use Node.js 22 LTS and Yarn 1 before installing dependencies. HTML minification is disabled because the Docusaurus native SWC binding can fail on Windows with restrictive cache permissions.
+
 ```bash
 yarn
 ```

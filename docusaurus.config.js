@@ -9,6 +9,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
+process.env.SKIP_HTML_MINIFICATION ??= 'true';
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const __filename = fileURLToPath(import.meta.url);
