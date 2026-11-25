@@ -6,7 +6,7 @@ sidebar_position: 6
 ## prerequisites
 
 - **Visual Studio 2019 or newer**, with the **"Universal Windows Platform development"** workload installed (this grabs the Windows 10 SDK and the UWP/XAML build tools)
-- Windows 10 SDK **10.0.19041.0** (the project also supports down to 10.0.17763.0, i.e. Windows 10 1809)
+- Windows 10 SDK **10.0.19041.0** (the project also supports down to 10.0.17134.0, i.e. Windows 10 1803)
 
 :::note
 This is a legacy-style UWP project, not an SDK one - **`dotnet build` won't work here**. You need MSBuild with the UWP/XAML targets, which only exist with Visual Studio. There's also no test project.
